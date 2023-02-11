@@ -1,0 +1,105 @@
+<div id="formulair-cover">
+    <div class="main-content">
+        <div class="formulair">
+            <p>N’hésitez pas à remplir le formulaire.<br>
+                Nous vous répondrons dans les 24h ouvrables.</p>
+            <div class="input">
+                <label for="textfield">Nom</label>
+                <input type="text" name="textfield" value="">
+            </div>
+            <div class="input">
+                <label for="textfield">Prénom</label>
+                <input type="text" name="textfield" value="">
+            </div>
+            <div class="input">
+                <label for="textfield">Email</label>
+                <input type="email" name="textfield" value="">
+            </div>
+            <div class="input">
+                <label for="textfield">Téléphone</label>
+                <input type="text" name="textfield" value="">
+            </div>
+            <div class="input">
+                <label for="textfield">Poste</label>
+                <input type="text" name="textfield" value="">
+            </div>
+            <div class="cv">
+                <label class="label" for="file">CV</label>
+                <div class="inputWrapper">
+                    <label class="input-container">
+                        <span class="file-text">Importer le fichier..</span>
+                        <span class="form-button"><i class="fas fa-file-upload"></i></span>
+                        <input class="form-input-file" type="file" id="file" size="14" />
+                    </label>
+                </div>
+            </div>
+            <div class="letter_motivation">
+                <label class="label" for="file">Lettre de motivation</label>
+                <div class="inputWrapper">
+                    <label class="input-container">
+                        <span class="file-text">Importer le fichier..</span>
+                        <span class="form-button"><i class="fas fa-file-upload"></i></span>
+                        <input class="form-input-file" type="file" id="file" size="14" />
+                    </label>
+                </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LetD68UAAAAALFcha6ZXnrzALQeLFim0bpW9vb_"></div>
+            <button type="submit" class="btn">Envoyer</button>
+            <script>
+                $(function () {
+                    $('input[type="file"]').change(function (e) {
+                        var fileName = e.target.files[0].name;
+                        $(this).siblings('.file-text').html(fileName);
+                    });
+                })
+            </script>
+        </div>
+        <div class="info">
+            <h1>Rejoindre Notoriety c’est rejoindre une équipe jeune, talentueuse et dynamique! </h1>
+            <p>
+                Rejoignez-nous sur Facebook <br>
+                <a href="https://www.facebook.com/Notoriety/" target="_blank">Notoriety-Group</a>
+            </p>
+        </div>
+    </div>
+    <div class="bottom-wave"></div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    //style inpute
+    $('.input input').focus(function () {
+        $(this).siblings("label").css({
+            'top': '-11px',
+            'font-size': '12px',
+            'background': '#fff',
+            'padding': '2px'
+        });
+        $(this).parent().css({
+            'border': '2px solid #03A9F4'
+        });
+    })
+    $('.input input').focusout(function () {
+        if ($(this).val() != '') {
+            $(this).parent().css({
+                'border': '1px solid #ccc'
+            });
+            $(this).siblings('.err').css({
+                'display': 'none'
+            })
+        } else {
+            $(this).siblings("label").css({
+                'left': '10px',
+                'top': '10px',
+                'font-size': '15px'
+            });
+            $(this).parent().css({
+                'border': '1px solid #ccc'
+            });
+        }
+    })
+    $('.input input').on('input', function () {
+        $(this).siblings('.err').css({
+            'display': 'none'
+        })
+    });
+</script>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/icons/notoriety-logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Notoriety</title>
+    <style>
+        #preloader {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        #iframe-preloader {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        .preloadbox {
+            box-sizing: border-box;
+            width: 110px;
+            height: 110px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: space-around;
+        }
+
+        .preloadbox .square {
+            width: 30px;
+            height: 30px;
+            background: rgba(73, 16, 246, 0.7);
+            opacity: 0;
+            -webkit-animation: preloading-sq 3s ease infinite;
+            animation: preloading-sq 3s ease infinite;
+            /* box-shadow: 1px 1px 9px transparentize($square-c,.3); */
+            -webkit-filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+            filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+        }
+
+        .preloadbox #square-2 {
+            -webkit-animation-delay: .75s;
+            animation-delay: .75s;
+        }
+
+        .preloadbox #square-3 {
+            -webkit-animation-delay: 2.25s;
+            animation-delay: 2.25s;
+        }
+
+        .preloadbox #square-4 {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        @-webkit-keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+
+        @keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+    </style>
+</head>
+
+<body id="accueil">
+    <!--*********************Addons*********************-->
+    <!--preloader -->
+    <script>
+        $(function () {
+            $(window).bind('load', function () {
+                //$('#preloader').fadeOut(100);
+                $('#map').html(
+                    '<div id="iframe-preloader"><div class="preloadbox">' +
+                    '<div class="square" id="square-1"></div>' +
+                    '<div class="square" id="square-2"></div>' +
+                    '<div class="square" id="square-3"></div>' +
+                    '<div class="square" id="square-4"></div>' +
+                    '</div></div>' +
+                    '<iframe id="ifram-id" style="visibility: hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.13006945441333!2d-1.919786813749576!3d34.67892589368231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7864b41b21fd77%3A0xec5eb9a094c59dfa!2sNotoriety+SARL!5e0!3m2!1sen!2sma!4v1563355232563!5m2!1sen!2sma" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen title="maps"></iframe>'
+                );
+                $('#map').css({
+                    'visibility': 'visible'
+                });
+            });
+
+            var interval = setInterval(function () {
+                $('#iframe-preloader').css({
+                    'display': 'none'
+                });
+                $('#map > iframe').css({
+                    'visibility': 'visible'
+                });
+                clearInterval(interval);
+            }, 2000);
+        });
+    </script>
+
+    <!--<div id="preloader">
+        <div class="preloadbox">
+            <div class="square" id="square-1"></div>
+            <div class="square" id="square-2"></div>
+            <div class="square" id="square-3"></div>
+            <div class="square" id="square-4"></div>
+        </div>
+    </div>-->
+
+    <!--Cookies notify -->
+    <div class="cookies-alert">
+        <p>
+            Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web.
+            Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.
+        </p>
+        <div class="btns">
+            <button class="accept" onclick="window.location.href='cookies.php'">J'accepte</button>
+            <a class="more" href="RGPD.pdf">En savoir plus</a>
+        </div>
+    </div>
+
+    <!--sticky bar for social media bar -->
+    <div class="social-media-sticky-bar">
+        <div class="item facebook" onclick="window.open('https://www.facebook.com/Notoriety/')">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="item instagram" onclick="window.open('https://www.instagram.com/notoriety_group/')">
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="item twitter">
+            <div class="icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <div class="item minu">
+            <div class="icon">
+                <i class="fas fa-share-alt"></i>
+            </div>
+        </div>
+    </div>
+    <!--*********************END*********************-->
+    <header style="background: #fff">
+        <div class="f-part">
+            <div class="icon" onclick="window.open('index','_self')">
+                <img src="img/icons/Notorietyl-ogo.png" alt="" srcset="">
+            </div>
+            <div class="number">+ (32) 471 81 82 83</div>
+        </div>
+        <nav class='menu'>
+            <div class="menu-play">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="index#qui-sommes-nous">QUI SOMMES-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="index#nos-services">NOS SERVICES</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="#" onclick="location. reload(true);">RECURTEMENT</a>
+                    <hr style="width: 100%">
+                </li>
+                <li>
+                    <a href="contact">CONTACTEZ-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="devis">DEMANDE DE DEVIS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="blog">BLOG</a>
+                    <hr>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="recurtement-main-container">
+        <div id="recurtment-cover">
+            <div class="main-content">
+                <div class="container">
+                    <h1>
+                        Postuler Pour rejoindre <br>
+                        notre centre d'appel
+                    </h1>
+                    <p>
+                        Notre entreprise recherche constamment de nouveaux profils talentueux,
+                        de télé-vendeur chevronnés,
+                        de télésecrétaires dynamiques, motivés et de superviseur avec une main
+                        de fer dans un gant de velours
+                    </p>
+                    <div class="main-nav">
+                        <div class="offres animated" onclick="$('.recurtement-main-container').load('_offres.html')">
+                            Offres</div>
+                        <div class="candidature animated"
+                            onclick="$('.recurtement-main-container').load('_formulair.html')">candidature spontanée
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-img"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="items">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>
+                                Angle Bd Allal Ben Abdallah et BD Youssef
+                                Ibn Tachfine 60000 Oujda, Maroc
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>
+                                080-8518411
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <p onclick="window.open('mailto:Job@notoriety-group.com')" style="cursor: pointer">
+                                Job@notoriety-group.com
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"
+                                onclick="window.open('https://www.facebook.com/Notoriety/')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-linkedin-in"
+                                onclick="window.open('https://fr.linkedin.com/company/notoriety-group')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-instagram"
+                                onclick="window.open('https://www.instagram.com/notoriety_group/')"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.13006945441333!2d-1.919786813749576!3d34.67892589368231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7864b41b21fd77%3A0xec5eb9a094c59dfa!2sNotoriety+SARL!5e0!3m2!1sen!2sma!4v1563355232563!5m2!1sen!2sma"
+                    width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="copyright">
+            <p>
+                Copyright &copy; Notoriety 2016. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

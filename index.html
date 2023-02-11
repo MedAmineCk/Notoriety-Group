@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='http://www.notoriety-group.com/' property='og:url' />
+    <meta name="p:domain_verify" content="6147a971b9ab76d4af77095dcdc9c7ac" />
+    <meta content='Notoriety Group' property='og:title' />
+    <meta
+        content='Notoriety Group est un centre d’appels maroc qui propose à ses clients plusieurs prestations variées dont le télésecrétariat et la prise de rdv offshore'
+        property='og:description' />
+    <meta content="Notoriety Group centre d’appels maroc offre à ses clients des services de qualités en télésecrétariat, prise de rdv offshore,... Avec une équipe qualifiée et expérimentée à l’international, nous nous engageons à trouver des solutions adaptées à vos besoins pour vous permettre d’atteindre les performances souhaitées. centre d'
+        appels maroc, centre d'appels offshore, centre d'appels oujda, prise de rdv offshore, télévente maroc,
+        télésecrétariat, télésecrétariat maroc, télésecrétariat offshore." name='description' />
+    <meta
+        content="centre d'appels maroc, centre d'appels offshore, centre d'appels oujda, prise de rdv offshore, televente maroc, telesecretariat, telesecretariat maroc, telesecretariat offshore, televente maroc, telesecretariat, telesecretariat maroc, telesecretariat offshore"
+        name='keywords' />
+    <meta content='global' name='distribution' />
+    <meta content='1 days' name='revisit-after' />
+    <meta content='document' name='resource-type' />
+    <meta content='all' name='audience' />
+    <meta content='notoriety-group' name='rating' />
+    <meta content='all' name='robots' />
+    <meta content='index, follow' name='robots' />
+    <meta content='notoriety-group' name='author' />
+    <meta content='notoriety-group' name='generator' />
+    <meta content='fr' name='language' />
+    <meta content='france' name='geo.placename' />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Notoriety Group">
+    <link rel="icon" sizes="192x192" href="img/touch/chrome-touch-icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Notoriety Group">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#fff">
+    <link rel="shortcut icon" href="img/icons/notoriety-logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Notoriety Group</title>
+    <style>
+        #preloader {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #iframe-preloader {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        .preloadbox {
+            box-sizing: border-box;
+            width: 110px;
+            height: 110px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: space-around;
+        }
+
+        .preloadbox .square {
+            width: 30px;
+            height: 30px;
+            background: rgba(73, 16, 246, 0.7);
+            opacity: 0;
+            -webkit-animation: preloading-sq 3s ease infinite;
+            animation: preloading-sq 3s ease infinite;
+            /* box-shadow: 1px 1px 9px transparentize($square-c,.3); */
+            -webkit-filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+            filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+        }
+
+        .preloadbox #square-2 {
+            -webkit-animation-delay: .75s;
+            animation-delay: .75s;
+        }
+
+        .preloadbox #square-3 {
+            -webkit-animation-delay: 2.25s;
+            animation-delay: 2.25s;
+        }
+
+        .preloadbox #square-4 {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        @-webkit-keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+
+        @keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+    </style>
+</head>
+
+<body id="accueil">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v4.0'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="974577429303577" theme_color="#0084ff"
+        logged_in_greeting="Bonjour, comment puis-je vous aider ?"
+        logged_out_greeting="Bonjour, comment puis-je vous aider ?">
+    </div>
+
+    <!--*********************Addons*********************-->
+    <!--preloader -->
+    <script>
+        $(function () {
+            $(window).bind('load', function () {
+                //$('#preloader').fadeOut(100);
+                $('#map').html(
+                    '<div id="iframe-preloader"><div class="preloadbox">' +
+                    '<div class="square" id="square-1"></div>' +
+                    '<div class="square" id="square-2"></div>' +
+                    '<div class="square" id="square-3"></div>' +
+                    '<div class="square" id="square-4"></div>' +
+                    '</div></div>' +
+                    '<iframe id="ifram-id" style="visibility: hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.13006945441333!2d-1.919786813749576!3d34.67892589368231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7864b41b21fd77%3A0xec5eb9a094c59dfa!2sNotoriety+SARL!5e0!3m2!1sen!2sma!4v1563355232563!5m2!1sen!2sma" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen title="maps"></iframe>'
+                );
+                $('#map').css({
+                    'visibility': 'visible'
+                });
+            });
+
+            var interval = setInterval(function () {
+                $('#iframe-preloader').css({
+                    'display': 'none'
+                });
+                $('#map > iframe').css({
+                    'visibility': 'visible'
+                });
+                clearInterval(interval);
+            }, 2000);
+        });
+    </script>
+
+    <!--<div id="preloader">
+        <div class="preloadbox">
+            <div class="square" id="square-1"></div>
+            <div class="square" id="square-2"></div>
+            <div class="square" id="square-3"></div>
+            <div class="square" id="square-4"></div>
+        </div>
+    </div>-->
+
+    <!--Cookies notify -->
+    <div class="cookies-alert" style="display: none;">
+        <p>
+            Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web.
+            Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.
+        </p>
+        <div class="btns">
+            <button class="accept" onclick="window.location.href='cookies.php'">J'accepte</button>
+            <a class="more" href="RGPD.pdf">En savoir plus</a>
+        </div>
+    </div>
+
+    <!--sticky bar for social media bar -->
+    <div class="social-media-sticky-bar">
+        <div class="item facebook" onclick="window.open('https://www.facebook.com/Notoriety/')">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="item instagram" onclick="window.open('https://www.instagram.com/notoriety_group/')">
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="item twitter">
+            <div class="icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <div class="item minu">
+            <div class="icon">
+                <i class="fas fa-share-alt"></i>
+            </div>
+        </div>
+    </div>
+    <!--*********************END*********************-->
+    <header>
+        <div class="f-part">
+            <div class="icon" onclick="scrollToElem('accueil')">
+                <img src="img/icons/notoriety-white-logo-.png" alt="" srcset="">
+            </div>
+            <div class="number">+ (32) 471 81 82 83</div>
+        </div>
+        <nav class='menu'>
+            <div class="menu-play">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li>
+                    <a onclick="scrollToElem('qui-sommes-nous')">QUI SOMMES-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a onclick="scrollToElem('nos-services')">NOS SERVICES</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="recurtement">RECURTEMENT</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="contact">CONTACTEZ-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="devis">DEMANDE DE DEVIS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="blog">BLOG</a>
+                    <hr>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cover">
+        <h1>NOTORIETY GROUP <br> Votre Solution De Contact</h1>
+        <p>Appels entrants, sortants, e-mailing, ... Nous proposons différentes solutions multicanales adaptées aux
+            exigences et besoins de nos clients donneurs d’ordre</p>
+        <button class="btn" onclick="window.location.href = 'devis';">Demandez votre devis</button>
+        <div class="voir-video" onclick="openVideo();">
+            <div class="icon"><i class="far fa-play-circle"></i></div>
+            <span>VOIR LE VIDEO</span>
+        </div>
+        <div class="pop-up_video-container">
+            <div class="exit" onclick="closeVideo();">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div class="pop-up_video" id="yt-player"></div>
+        </div>
+
+    </section>
+
+    <section class="slider">
+        <div id='animated' class="slider_container animated slideInDown">
+            <h2>SATISFACTION</h2>
+            <p>Parce que nous savons que la meilleure des publicités, est un client satisfait.</p>
+        </div>
+    </section>
+    <hr>
+    <section class="solution" id="nos-services">
+        <h1>
+            Une Solution pour tous vos besoins
+        </h1>
+        <div class="grid-container">
+            <div class="item item1" style="grid-area: item1;">
+                <div class="label">
+                    <div class="icon">
+                        <img src="img/icons/vente-en-ligne.png" alt="">
+                    </div>
+                    <h3>Télévente</h3>
+                </div>
+                <p class="desc">
+                    Notoriety Group met à votre disposition toute une équipe de professionnels de la vente afin de mener
+                    avec succès vos projets B2B/B2C.
+                </p>
+                <a href="services.html#Televente">> > en savoir plus</a>
+            </div>
+            <div class="item item2" style="grid-area: item2;">
+                <div class="label">
+                    <div class="icon">
+                        <img src="img/icons/Sondage-Téléphionque.png" alt="" srcset="">
+                    </div>
+                    <h3>Enquête et Sondage téléphonique</h3>
+                </div>
+                <p class="desc">
+                    Nous complèterons votre base de données en fonction de vos besoins,
+                    et analyserons avec vous les
+                    résultats du travail effectué.
+                </p>
+                <a href="services.html#Sondage">> > en savoir plus</a>
+            </div>
+            <div class="item item3" style="grid-area: item3;">
+                <div class="label">
+                    <div class="icon">
+                        <img src="img/icons/prise-de-RDV.png" alt="" srcset="">
+                    </div>
+                    <h3>Prise de RDV</h3>
+                </div>
+                <p class="desc">
+                    Augmentez l’efficacité de votre équipe commerciale sur le terrain avec
+                    des rendez-vous qualifiés en fonction de vos critères.
+                </p>
+                <a href="services.html#Prise">> > en savoir plus</a>
+            </div>
+            <div class="item item4" style="grid-area: item4;">
+                <div class="label">
+                    <div class="icon">
+                        <img src="img/icons/Télésecretariat.png" alt="" srcset="">
+                    </div>
+                    <h3>Télésecrétariat</h3>
+                </div>
+                <p class="desc">
+                    Des télésecrétaires, souriantes, dynamiques,
+                    professionnelleset joignables selon vos besoins.
+                </p>
+                <a href="services.html#Telesecretariat">> > en savoir plus</a>
+            </div>
+        </div>
+        <a href="devis" class="btn">Demandez votre devis</a>
+    </section>
+
+    <section class="histoir" id="qui-sommes-nous">
+        <h1>
+            PARTAGEONS NOTRE HISTOIRE
+        </h1>
+        <div class="main-container">
+            <div class="qsn">
+                <h2>
+                    QUI SOMMES-NOUS
+                </h2>
+                <!--<h3>
+                    Notre <span>Histoire</span>
+                </h3>-->
+                <p>
+                    Notoriety Group Call Center propose une large gamme de prestations et services conformes aux
+                    exigences de ses partenaires afin de les conduire vers un développement commercial considérable et
+                    ainsi leur permettre de gagner en notoriété. <br>
+
+                    Nous mettons à votre disposition une équipe d’experts qualifiés dotée d’une large expérience cumulée
+                    aussi bien en France qu’en Belgique pour pouvoir bénéficier de ses expertises et services de qualité
+                    s’articulant autour des domaines suivants : <br>
+                    ⦁ La Télévente <br>
+                    ⦁ La prise de rendez-vous <br>
+                    ⦁ L’Enquête de satisfaction <br>
+                    ⦁ Les Services Après-vente <br>
+                    ⦁ Le Support Technique et Administratif <br>
+                    ⦁ Le Télésecrétariat <br>
+                    Chez Notoriety Group, nous sommes entièrement à l’écoute de nos clients et ce, pour adapter nos
+                    services à leurs besoins et créer des solutions sur mesure pour les satisfaire et faire durer
+                    l’entente avec nos partenaires.
+
+                </p>
+            </div>
+            <div class="grid-container-images">
+                <img class="img1" src="img/collage-1.jpg" alt="">
+                <img src="img/collage-12.jpg" alt="">
+            </div>
+        </div>
+        <div id="time-line">
+            <h1 class="main-title">
+                Notre Histoire et nos Défis
+            </h1>
+            <div class="time-line-container">
+                <div class="time-line">
+                    <div class="line center"></div>
+                    <div class="timing-container">
+                        <div class="item" data-index="0">
+                            <div class="year year-active">2016</div>
+                            <div class="cercle cercl-active"></div>
+                        </div>
+                        <div class="item" data-index="1">
+                            <div class="year">2018</div>
+                            <div class="cercle"></div>
+                        </div>
+                        <div class="item" data-index="2">
+                            <div class="year">2019</div>
+                            <div class="cercle"></div>
+                        </div>
+                        <div class="item" data-index="3">
+                            <div class="year">Future</div>
+                            <div class="cercle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeLine-slider-container">
+                <div class="cover">
+                    <div class="main">
+                        <div class="left">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="content">
+                            <div class="img">
+                                <img src="img/time_line/2016.jpg" alt="notoriety-group time-line">
+                            </div>
+                            <div class="main-content">
+                                <div class="label">
+                                    <h1>Création de Notoriety Group</h1>
+                                </div>
+                                <div class="desc">
+                                    <p>
+                                        Créé par Iliass MOUSSAOUI en Mars 2016,
+                                        Notoriety Group proposait à l’origine des services d’externalisation de prise de
+                                        rendez-vous.
+                                        La société dont le siège se situe à Oujda au MAROC comptait à l’époque 5
+                                        collaborateurs travaillant dans un seul local.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="valeurs">
+        <div class="description">
+            <h1>NOS VALEURS</h1>
+            <h3>Une éthique irréprochable, pour des relations durables.</h3>
+            <p>
+                Afin de renforcer notre positionnement au sein du marché des contacts center,
+                Notoriety group est convaincue de la nécessité de construire et préserver son
+                identité autour d’une éthique irréprochable.
+                Notre charte interne d’éthique est signée par chaque employé de notre entreprise,
+                et comporte les Principes de vérité et de clarté durant nos échanges avec nos clients et les vôtres,
+                protection des données, la protection de la vie privée ainsi que
+                le comportement durant nos échanges avec les clients.
+            </p>
+            <a href="contact" class="btn">Contactez-nous</a>
+        </div>
+        <div class="vals">
+            <div class="item val1">
+                <div class="icon">
+                    <img src="img/icons/Ethique.png" alt="" srcset="">
+                </div>
+                <div class="desc">
+                    <div class="label">Ethique</div>
+                    <div class="min-label">Une éthique irréprochable, pour des relations durables.</div>
+                    <p>
+                        Pour renforcer son positionnement au sein du marché des contacts centers,
+                        Notoriety Group est convaincu de la nécessité de construire et préserver
+                        son identité autour d’une éthique irréprochable.
+                        Chaque employé de notre entreprise,
+                        dès son arrivé sur nos locaux, est amené à signer une charte interne
+                        d’éthique par laquelle il
+                        s’engage à respecter les principes de vérité et de clarté durant les
+                        échanges avec nos clients
+                        et les vôtres ainsi à protéger leurs données et leur vie privée.
+
+                    </p>
+                </div>
+            </div>
+            <div class="item val2">
+                <div class="icon">
+                    <img src="img/icons/respect.png" alt="" srcset="">
+                </div>
+                <div class="desc">
+                    <div class="label">Reconnaissance</div>
+                    <div class="min-label">La reconnaissance au travail, premier facteur de réussite.</div>
+                    <p>
+                        En plus de sa transparence avec ses clients,
+                        Notoriety Group accorde une grande importance au capital humain.
+                        Chez nous, chaque employé, quel que soit sa position hiérarchique
+                        mérite une reconnaissance pour le travail accompli. Se sentir
+                        apprécié a un effet direct sur l’efficacité de son travail.
+                        Sa satisfaction est d’autant plus l’une de nos premières
+                        préoccupations. C’est justement dans
+                        cette perspective que nous investissons régulièrement dans le
+                        confort de nos locaux afin
+                        d’installer un environnement de travail le plus agréable possible
+                        pour l’épanouissement de nos
+                        employés.
+                        Notoriety Group leur offre également de réelles perspectives
+                        d’évolution professionnelle par le
+                        biais de mobilité interne.
+
+                    </p>
+                </div>
+            </div>
+            <div class="item val3">
+                <div class="icon">
+                    <img src="img/icons/Efficacité.png" alt="" srcset="">
+                </div>
+                <div class="desc">
+                    <div class="label">Efficacité</div>
+                    <div class="min-label">Seul on va plus vite ensemble on va plus loin.</div>
+                    <p>
+                        L’efficacité est l’un des objectifs majeurs de Notoriety Group.
+                        Chaque employé, en dépit de la nature de son post,
+                        doit ajouter sa pierre à l’édifice et contribuer au progrès
+                        et à l’évolution du groupe. Cette évolution découle d’un travail
+                        collectif, d’un partage de conseils et d’astuces, d’un management
+                        de proximité et d’un suivi des résultats en permanence.
+                        Nous cultivons un esprit de challenge chez nos employés car nous
+                        sommes persuadés que c’est
+                        l’attitude qui nous permettra de fournir les meilleurs résultats
+                        pour nos clients.
+                    </p>
+                </div>
+            </div>
+            <div class="item val4">
+                <div class="icon">
+                    <img src="img/icons/Transparence.png" alt="" srcset="">
+                </div>
+                <div class="desc">
+                    <div class="label">Transparence</div>
+                    <div class="min-label">La transparence, c’est notre Credo !</div>
+                    <p>
+                        Afin d’étendre nos relations avec nos clients sur le long terme,
+                        nous mettons à leur portée tous les aspects de nos processus et
+                        leur fournissons tous les outils de suivis nécessaires pour
+                        contrôler à distance le déroulement de notre mission.
+                        Nos clients sont les bienvenus dans nos locaux à tout moment afin
+                        de constater par eux même la
+                        qualité de notre travail et témoigner de notre rigueur.
+                        La transparence a aussi un impact favorable sur nos employés dans
+                        le sens où elle établit un
+                        climat de confiance et de sécurité au sein du groupe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conformite">
+        <div class="security">
+            <div class="quate">
+                <span class="quot-symbol up">&#8221</span>
+                <p>
+                    <span>Notoriety Group</span>
+                    collabore avec le leader européen
+                    de la sécurité de l’information Excellium Services
+                    dans le cadre d’une mise en conformité RGPD
+                    (Règlement général de la protection des données).
+                    Ainsi, les données à caractère personnel de vos
+                    clients et prospects seront sécurisées et ne seront
+                    utilisées qu’avec leur accord.
+                </p>
+                <span class="quot-symbol down">&#8221</span>
+            </div>
+            <div class="leader">
+                <div class="icon">
+                    <img src="img/icons/excellium.png" alt="">
+                </div>
+                <p>leader mondial de la protection des données privées et de la confidentialité</p>
+            </div>
+        </div>
+        <div class="rgpd">
+            <h1>Conformité <span>RGPD</span></h1>
+            <p>
+                Notoriety Group est parmi les rares centres d’appels
+                au Maroc qui s’engage à respecter les lois en vigueur,
+                notamment le dernier règlement RGPD sur la protection
+                des données personnelles.
+                Pour répondre aux exigences du RGPD,
+                notre société fait face à ces nouvelles obligations
+                liées à la sécurité et la confidentialité afin
+                d’établir un cadre légal pour les interactions entre
+                nos agents et les clients.
+
+            </p>
+            <a href="RGPD.pdf" target="_blank">Comment ça marche ?</a>
+        </div>
+    </section>
+
+    <section class="resum">
+        <p>
+            Vous cherchez un call center sérieux, transparent,
+            qui veille à la satisfaction de vos clients et augmente
+            votre notoriété ?
+            Alors vous êtes au bon endroit !
+        </p>
+        <h3>
+            Demandez votre devis maintenant !
+        </h3>
+        <a href="devis" class="btn">Demandez votre devis</a>
+        <div class="wave">
+            <h1>
+                NOUS PROPOSONS <br>
+                DIFFERENTES SOLUTIONS.
+            </h1>
+            <p>
+                Notoriety accompagne ses clients,<br>
+                de toutes tailles et de tous secteurs,<br>
+                dans l'augmentation de leur chiffre d'affaires en<br>
+                leur proposant des services hautement qualifiés.<br>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="items">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>
+                                Angle Bd Allal Ben Abdallah et BD Youssef
+                                Ibn Tachfine 60000 Oujda, Maroc
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>
+                                080-8518411
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <p onclick="window.open('mailto:Job@notoriety-group.com')" style="cursor: pointer">
+                                Job@notoriety-group.com
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"
+                                onclick="window.open('https://www.facebook.com/Notoriety/')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-linkedin-in"
+                                onclick="window.open('https://fr.linkedin.com/company/notoriety-group')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-instagram"
+                                onclick="window.open('https://www.instagram.com/notoriety_group/')"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map"></div>
+        </div>
+
+        <div id="copyright">
+            <p>
+                Copyright &copy; Notoriety 2019. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content='Notoriety Group' property='og:title' />
+    <meta
+        content='Notoriety Group est un centre d’appels maroc qui propose à ses clients plusieurs prestations variées dont le télésecrétariat et la prise de rdv offshore'
+        property='og:description' />
+    <meta
+        content="centre d'appels maroc, centre d'appels offshore, centre d'appels oujda, prise de rdv offshore, televente maroc, telesecretariat, telesecretariat maroc, telesecretariat offshore, televente maroc, telesecretariat, telesecretariat maroc, telesecretariat offshore"
+        name='keywords' />
+    <link rel="shortcut icon" href="img/icons/notoriety-logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Notoriety</title>
+    <style>
+        #preloader {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .preloadbox {
+            box-sizing: border-box;
+            width: 110px;
+            height: 110px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: space-around;
+        }
+
+        .preloadbox .square {
+            width: 30px;
+            height: 30px;
+            background: rgba(73, 16, 246, 0.7);
+            opacity: 0;
+            -webkit-animation: preloading-sq 3s ease infinite;
+            animation: preloading-sq 3s ease infinite;
+            /* box-shadow: 1px 1px 9px transparentize($square-c,.3); */
+            -webkit-filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+            filter: drop-shadow(8px 8px 7px rgba(56, 8, 203, 0.7));
+        }
+
+        .preloadbox #square-2 {
+            -webkit-animation-delay: .75s;
+            animation-delay: .75s;
+        }
+
+        .preloadbox #square-3 {
+            -webkit-animation-delay: 2.25s;
+            animation-delay: 2.25s;
+        }
+
+        .preloadbox #square-4 {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+        @-webkit-keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+
+        @keyframes preloading-sq {
+            0% {
+                opacity: 1;
+                background: rgba(246, 16, 189, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(246, 16, 189, 0.7));
+            }
+
+            25% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+                background: rgba(16, 189, 246, 0.7);
+                -webkit-filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+                filter: drop-shadow(8px 8px 7px rgba(16, 189, 246, 0.7));
+            }
+
+            100% {
+                opacity: .3;
+            }
+        }
+    </style>
+</head>
+
+<body id="accueil">
+    <!--*********************Addons*********************-->
+    <!--preloader -->
+    <script>
+        $(function () {
+
+            $(window).bind('load', function () {
+                $('#preloader').fadeOut(100)
+            });
+        });
+    </script>
+
+    <div id="preloader">
+        <div class="preloadbox">
+            <div class="square" id="square-1"></div>
+            <div class="square" id="square-2"></div>
+            <div class="square" id="square-3"></div>
+            <div class="square" id="square-4"></div>
+        </div>
+    </div>
+
+    <!--Cookies notify -->
+    <div class="cookies-alert">
+        <p>
+            Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web.
+            Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.
+        </p>
+        <div class="btns">
+            <button class="accept" onclick="window.location.href='cookies.php'">J'accepte</button>
+            <a class="more" href="RGPD.pdf">En savoir plus</a>
+        </div>
+    </div>
+
+    <!--sticky bar for social media bar -->
+    <div class="social-media-sticky-bar">
+        <div class="item facebook" onclick="window.open('https://www.facebook.com/Notoriety/')">
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="item instagram" onclick="window.open('https://www.instagram.com/notoriety_group/')">
+            <div class="icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+        <div class="item twitter">
+            <div class="icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <div class="item minu">
+            <div class="icon">
+                <i class="fas fa-share-alt"></i>
+            </div>
+        </div>
+    </div>
+    <!--*********************END*********************-->
+    <header style="background: #fff">
+        <div class="f-part">
+            <div class="icon" onclick="window.open('index','_self')">
+                <img src="img/icons/Notorietyl-ogo.png" alt="" srcset="">
+            </div>
+            <div class="number">+ (32) 471 81 82 83</div>
+        </div>
+        <nav class='menu'>
+            <div class="menu-play">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li>
+                    <a href="index#qui-sommes-nous">QUI SOMMES-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="index#nos-services">NOS SERVICES</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="recurtement">RECURTEMENT</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="contact">CONTACTEZ-NOUS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="devis">DEMANDE DE DEVIS</a>
+                    <hr>
+                </li>
+                <li>
+                    <a href="blog">BLOG</a>
+                    <hr>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services-main-container">
+        <div class="tracker">
+            <div data-id="Televente" class="active" data-index="0" style="border: 1px solid #f81c35"></div>
+            <div data-id="Sondage" data-index="1" style="border: 1px solid #189bf6"></div>
+            <div data-id="Prise" data-index="2" style="border: 1px solid #ffa52f"></div>
+            <div data-id="Telesecretariat" data-index="3" style="border: 1px solid #7510f1"></div>
+        </div>
+        <div id="services-cover">
+            <article id="Televente">
+                <h1 style="color: #f81c35">Télévente</h1>
+                <div class="thum">
+                    <img src="img/icons/SVG/email.svg" alt="">
+                </div>
+                <h2>
+                    Notoriety Group met à votre disposition toute une équipe de professionnels de la vente afin de mener
+                    avec succès vos projets B2B/B2C.
+                </h2>
+                <p>
+                    Réaliser et concrétiser une vente ne se fait pas à l’improviste.
+                    En élaborant une démarche logique de vente basée sur une technique d’argumentations solides, notre
+                    équipe d’expert vous permettra d’atteindre les performances commerciales souhaitées. <br>
+
+                    À l’aide de professionnels en télévente ayant une bonne connaissance des produits et services à
+                    vendre et maîtrisant les techniques de persuasion pour faire face à la résistance de
+                    l’interlocuteur, Notoriety Group vous permettra de joindre un plus grand nombre de prospect, de les
+                    fidéliser et ainsi d’accroître vos ventes grâce à son service télévente. <br>
+
+                    Avec un haut niveau de professionnalisme et d’implication, nous vous offrons une formule qui, non
+                    seulement vous fera gagner du temps, mais aussi mènera avec succès vos projet B2B/B2C et multipliera
+                    vos chiffres à moindre coût.
+
+                </p>
+            </article>
+            <article id="Sondage">
+                <h1 style="color: #189bf6">Enquête et Sondage téléphonique</h1>
+                <div class="thum">
+                    <img src="img/icons/SVG/to-do-list.svg" alt="">
+                </div>
+                <h2>
+                    Nous complèterons votre base de données en fonction de vos besoins,
+                    et analyserons avec vous les
+                    résultats du travail effectué.
+                </h2>
+                <p>
+                    Dans le cadre de l’évaluation de satisfactions de vos clients, Notoriety Group mène des enquêtes par
+                    voie téléphonique pour mesurer l’impact de vos produits ou services.
+                    À partir de questionnaires élaborés selon les objectifs de nos clients, les réponses obtenues nous
+                    permettront d’étoffer une base de données de qualité. <br>
+
+                    Habilité en termes de ressources humaines et matérielles, Notoriety Group vous propose de prendre en
+                    charge vos enquêtes et sondages téléphoniques à partir desquels nous obtiendrons les résultats
+                    représentant l’indicateur de performance de votre entreprise. <br>
+
+                    Cette opération de récolte d’avis auprès de vos clients vous servira ainsi, de base pour juger la
+                    qualité de vos produits ou services et de mesurer votre évolution dans le temps.
+
+                </p>
+            </article>
+            <article id="Prise">
+                <h1 style="color: #ffa52f">Prise de RDV</h1>
+                <div class="thum">
+                    <img src="img/icons/SVG/support-team.svg" alt="">
+                </div>
+                <h2>
+                    Augmentez l’efficacité de votre équipe commerciale sur le terrain avec
+                    des rendez-vous qualifiés en fonction de vos critères.
+                </h2>
+                <p>
+                    Pour réussir à organiser une entrevue entre le prospect et le technicien ou le commercial, Notoriety
+                    mise sur la performance de l’agent. <br>
+
+                    Quel que soit votre secteur d’activité, nous mettons à votre disposition une équipe d’experts
+                    faisant preuve de beaucoup de souplesse et d’un sens du relationnel irréprochable et à laquelle vous
+                    pouvez confier tout le processus de la prise de rendez-vous. <br>
+                    En tenant un discours structuré basé essentiellement sur la règle des 3C : clair, concis et
+                    cohérent, nos agents vous permettront de générer des rendez-vous qualifiés et des contacts à grande
+                    valeur ajoutée. <br>
+
+                    En cas de réticence ou d’objection, nos experts ont beaucoup de patience ! Ils ont toutes les
+                    compétences et l’expérience nécessaire afin de trouver un angle d’attaque pour avancer leurs
+                    argumentaires sans pour autant tomber dans le forcing.
+
+                </p>
+            </article>
+            <article id="Telesecretariat">
+                <h1 style="color: #7510f1">Télésecrétariat</h1>
+                <div class="thum">
+                    <img src="img/icons/SVG/call.svg" alt="">
+                </div>
+                <h2>
+                    Des télésecrétaires, souriantes, dynamiques,
+                    professionnelles et joignables selon vos besoins.
+                </h2>
+                <p>
+                    Trouvez-vous du mal à gérer un standard téléphonique en parallèle de votre activité? Déléguez au
+                    lieu d’embaucher ! <br>
+                    Notoriety Group vous déchargera des tâches administratives et vous permettra de vous focaliser sur
+                    votre activité principale. <br>
+
+                    Externaliser les services de secrétariat vous permettra d’éviter à la fois les surcoûts d’embauche
+                    et aussi de vous épargner un gros budget lié aux matériels informatiques nécessaire au travail.
+                    Persuadé que l’accueil téléphonique reflète l’image de l’entreprise, Notoriety Group met le vôtre
+                    entre de bonnes mains. <br>
+                    Une équipe de télésecrétaires dotée d’un bon sens de rigueur et d’organisation, faisant preuve de
+                    courtoisie et d’un bon sens relationnel est prête à personnaliser vos accueils téléphoniques selon
+                    vos consignes et à gérer vos agendas et rendez-vous. <br>
+
+                    Nous vous offrons une alternative à la fois économique et qualitative pour vos tâches
+                    administratives.
+
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info-container">
+                <div class="contact-info">
+                    <div class="items">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>
+                                Angle Bd Allal Ben Abdallah et BD Youssef
+                                Ibn Tachfine 60000 Oujda, Maroc
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>
+                                080-8518411
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <p onclick="window.open('mailto:Job@notoriety-group.com')" style="cursor: pointer">
+                                Job@notoriety-group.com
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"
+                                onclick="window.open('https://www.facebook.com/Notoriety/')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-linkedin-in"
+                                onclick="window.open('https://fr.linkedin.com/company/notoriety-group')"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-instagram"
+                                onclick="window.open('https://www.instagram.com/notoriety_group/')"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410.13006945441333!2d-1.919786813749576!3d34.67892589368231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7864b41b21fd77%3A0xec5eb9a094c59dfa!2sNotoriety+SARL!5e0!3m2!1sen!2sma!4v1563355232563!5m2!1sen!2sma"
+                    width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="copyright">
+            <p>
+                Copyright &copy; Notoriety 2016. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+    <script>
+        $('.tracker > div').on('click', function () {
+            var id = $(this).data('id');
+            $('.tracker > div').removeClass('active');
+            $(this).addClass('active');
+            scrollToService(id);
+        })
+        $(window).scroll(function () {
+            //1
+            var hT = $('#Televente').offset().top,
+                hH = $('#Televente').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            if (wS > (hT + hH - wH)) {
+                $('.tracker > div').removeClass('active');
+                $(".tracker > div[data-index='" + 0 + "']").addClass('active');
+            }
+            //2
+            var hT = $('#Sondage').offset().top,
+                hH = $('#Sondage').outerHeight();
+            if (wS > (hT - 80 + hH - wH)) {
+                $('.tracker > div').removeClass('active');
+                $(".tracker > div[data-index='" + 1 + "']").addClass('active');
+            }
+            //3
+            var hT = $('#Prise').offset().top,
+                hH = $('#Prise').outerHeight();
+            if (wS > (hT - 80 * 2 + hH - wH)) {
+                $('.tracker > div').removeClass('active');
+                $(".tracker > div[data-index='" + 2 + "']").addClass('active');
+            }
+            //4
+            var hT = $('#Telesecretariat').offset().top,
+                hH = $('#Telesecretariat').outerHeight();
+            if (wS > (hT - 80 * 3 + hH - wH)) {
+                $('.tracker > div').removeClass('active');
+                $(".tracker > div[data-index='" + 3 + "']").addClass('active');
+            }
+        });
+
+        function scrollToService(id) {
+            var ele = document.getElementById(id);
+            ele.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>
